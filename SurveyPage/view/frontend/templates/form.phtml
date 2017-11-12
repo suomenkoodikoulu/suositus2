@@ -1,0 +1,8 @@
+<?php /** @var Survey\SurveyPage\Block\Answers $block */ ?>
+<h1>Toptal Posts</h1>
+<?php foreach($block->getAnswers() as $answer): ?>
+    <?php /** @var Survey\SurveyPage\Model\Answer */ ?>
+    <h2><a href="<?php echo $block->getAnswerUrl($answer);?>"><?php echo $answer->getAnswer1(); ?></a></h2>
+    <p><?php echo $answer->getContent(); ?></p>
+<?php endforeach; ?>
+
